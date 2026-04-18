@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Startup Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚀 AI Startup Simulator</h1>
+    <p>Enter your idea and generate a business plan</p>
+
+    <textarea id="prompt" placeholder="e.g. AI app for students"></textarea>
+
+    <button onclick="generatePlan()">Generate Business Plan</button>
+
+    <div id="outputBox">
+        <h2>Output</h2>
+        <pre id="output"></pre>
+    </div>
+
+    <button id="downloadBtn" onclick="downloadPlan()" style="display:none;">
+        Download Business Plan (DOCX)
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

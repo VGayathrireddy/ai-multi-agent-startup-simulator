@@ -1,6 +1,6 @@
 from llm.ollama_client import generate_response
 
-def marketing_agent(idea: str):
+def growth_strategy_agent(idea: str):
     prompt = f"""
 You are a marketing strategist.
 

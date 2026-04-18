@@ -1,7 +1,7 @@
 from agents.ideation_agent import ideation_agent
-from agents.market_agent import market_agent
+from agents.market_research_agent import market_research_agent
 from agents.business_agent import business_agent
-from agents.marketing_agent import marketing_agent
+from agents.growth_strategy_agent import growth_strategy_agent
 from utils.formatter import format_business_plan, save_to_docx
 
 def extract_refined_idea(text: str):
@@ -30,16 +30,16 @@ def supervisor_agent(user_input: str):
     refined_idea = extract_refined_idea(idea_result)
 
     # Step 3: Run other agents
-    market_result = market_agent(refined_idea)
+    market_research_result = market_research_agent(refined_idea)
     business_result = business_agent(refined_idea)
-    marketing_result = marketing_agent(refined_idea)
+    growth_strategy_result =growth_strategy_agent(refined_idea)
 
     data = {
         "refined_idea": refined_idea,
         "idea_full": clean_idea,  # ✅ use cleaned version
-        "market": market_result,
+        "market_research": market_research_result,
         "business": business_result,
-        "marketing": marketing_result
+        "growth_strategy": growth_strategy_result
     }
 
     # 🆕 Create formatted document

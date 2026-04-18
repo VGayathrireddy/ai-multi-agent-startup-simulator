@@ -1,6 +1,6 @@
 from llm.ollama_client import generate_response
 
-def market_agent(idea: str):
+def market_research_agent(idea: str):
     prompt = f"""
 You are a market research analyst.
 
