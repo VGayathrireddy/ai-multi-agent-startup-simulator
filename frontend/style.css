@@ -53,3 +53,22 @@ button:hover {
 pre {
     white-space: pre-wrap;
 }
+
+#output h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#output h3 {
+    margin-top: 15px;
+    color: #60a5fa;
+}
+
+#output p {
+    line-height: 1.6;
+}
+
+#output hr {
+    border: 0.5px solid #334155;
+    margin: 10px 0;
+}

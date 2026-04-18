@@ -3,7 +3,8 @@ from agents.ideation_agent import ideation_agent
 from agents.market_research_agent import market_research_agent
 from agents.business_agent import business_agent
 from agents.growth_strategy_agent import growth_strategy_agent
-from agents.supervisor_agent import supervisor_agent
+
+from graph.workflow import app_graph
 
 from fastapi.middleware.cors import CORSMiddleware # To allow CORS requests from frontend
 from fastapi.responses import FileResponse # To send generated docx file back to frontend
@@ -17,18 +18,24 @@ def home():
 
 @app.get("/generate")
 def generate(prompt: str):
-    result = supervisor_agent(prompt)
+    result = app_graph.invoke({"input": prompt})
 
     return {
         "status": "success",
-        "data": result
+        "output": result["final_output"]   # ✅ send only formatted text
     }
 
 @app.get("/download")
 def download(prompt: str):
-    result = supervisor_agent(prompt)
+    result = app_graph.invoke({"input": prompt})
 
-    file_path = save_to_docx(result)
+    file_path = save_to_docx({
+        "refined_idea": result["refined_idea"],
+        "idea_full": result["idea_full"],
+        "market_research": result["market_research"],
+        "business": result["business"],
+        "growth_strategy": result["growth_strategy"]
+    })
 
     return FileResponse(
         file_path,
