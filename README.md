@@ -135,6 +135,8 @@ AI-STARTUP-SIMULATOR/
 │
 └── main.py
 └── requirements.txt
+└── README.md
+└── .gitignore
 ```
 
 ---
