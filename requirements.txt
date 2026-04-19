@@ -1,0 +1,21 @@
+fastapi
+uvicorn
+requests
+python-docx
+langgraph
+typing-extensions
+
+
+** Optional (Recommended – Stable Versions) **
+If you want fewer compatibility issues, use this:
+
+fastapi==0.110.0
+uvicorn==0.29.0
+requests==2.31.0
+python-docx==1.1.0
+langgraph==0.0.40
+typing-extensions==4.9.0
+
+** Note **
+Ollama is NOT included → it must be installed separately on your system
+If langgraph gives issues, also install: pip install langchain
