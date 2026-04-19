@@ -170,6 +170,10 @@ AI-STARTUP-SIMULATOR/
 
 └── main.py
 
+|
+
+└── requirements.txt
+
 
 ---
 
