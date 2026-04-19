@@ -33,32 +33,21 @@ It demonstrates:
 ---
 
 ## 🧩 Architecture
+```bash
 User Input
-
-↓
-
+      ↓
 LangGraph Workflow
-
-↓
-
+      ↓
 [ Ideation Agent ]
-
-↓
-
+      ↓
 [Market_Research_Agent], [Business_Model_Agent],  [Growth_Strategy_Agent]
-
-↓
-
+      ↓
 Final Node
-
-↓
-
+      ↓
 Formatted Business Plan Output
-
-↓
-
+      ↓
 Frontend + DOCX Download
-
+```
 
 ---
 
@@ -118,62 +107,35 @@ Frontend + DOCX Download
 ---
 
 ## 📂 Project Structure
+```bash
 AI-STARTUP-SIMULATOR/
-
 │
-
 ├── agents/
-
 │ ├── ideation_agent.py
-
 │ ├── market_research_agent.py
-
 │ ├── business_agent.py
-
 │ └── growth_strategy_agent.py
-
 │
-
 ├── graph/
-
 │ └── workflow.py
-
 │
-
 ├── utils/
-
 │ └── formatter.py
-
 │
-
 ├── llm/
-
 │ └── ollama_client.py
-
 │
-
 ├── frontend/
-
 │ ├── index.html
-
 │ ├── style.css
-
 │ └── script.js
-
 │
-
 ├── outputs/
-
 │ └── business_plan.docx
-
 │
-
 └── main.py
-
-|
-
 └── requirements.txt
-
+```
 
 ---
 
