@@ -145,8 +145,8 @@ AI-STARTUP-SIMULATOR/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/ai-startup-simulator.git
-cd ai-startup-simulator
+git clone https://github.com/VGayathrireddy/ai-multi-agent-startup-simulator
+cd ai-multi-agent-startup-simulator
 ```
 
 ### 2. Install Dependencies
